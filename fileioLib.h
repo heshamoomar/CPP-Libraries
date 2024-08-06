@@ -1,9 +1,13 @@
 #pragma once
 #include <fstream>
 #include<string>
+#include<iostream>
 
 namespace FileIO
 {
+	//	create_file can also use default parameter for NumberOfFiles = 1 to create one file,
+	//	instead of method overloading.
+
 	void create_file(std::string FileName, std::string FileExtention) {
 		std::string fullFileName;
 
@@ -19,7 +23,7 @@ namespace FileIO
 		}
 	}
 
-	void create_file(const std::string& FileName, const std::string& FileExtension, short NumberOfFiles) {
+	void create_file(const std::string FileName, const std::string FileExtension, short NumberOfFiles) {
 		for (short i = 1; i <= NumberOfFiles; ++i) {
 			std::string fullFileName;
 
