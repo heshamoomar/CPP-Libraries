@@ -40,8 +40,17 @@ namespace Numbers
 {
 	int readNumber() {
 		int num;
-		std::cout << "enter a number: ";
+		std::cout << "Enter a number: ";
 		std::cin >> num;
+		while (std::cin.fail())
+		{
+			//	user didn't input a number
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+			std::cout << "Please enter a valid number: ";
+			std::cin >> num;
+		}
 		return num;
 	}
 
