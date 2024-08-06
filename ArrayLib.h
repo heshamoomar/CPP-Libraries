@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include"RandomLib.h"
+using namespace Random;
 
 namespace Array
 {
@@ -8,13 +9,13 @@ namespace Array
 		std::cout << "\nEnter number of elements:\n";
 		std::cin >> arrLength;
 		for (int i = 0; i < arrLength; i++) {
-			arr[i] = RandomNumber(1, 100);
+			arr[i] = Random::RandomNumber(1, 100);
 		}
 	}
 
 	void ShuffleArray(int arr[], int size) {	//	Fisher-Yates Shuffle Algorithm
 		for (int i = size - 1; i > 0; i--) {
-			int j = RandomNumber(0, i);
+			int j = Random::RandomNumber(0, i);
 			std::swap(arr[i], arr[j]);
 		}
 	}
