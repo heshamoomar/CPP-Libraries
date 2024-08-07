@@ -4,7 +4,7 @@
 #include<string>
 #include<iostream>
 
-namespace Geometry 
+namespace Geometry
 {
 	float area_of_triangle(float side1, float side2) {	//	by 2 sides
 		return side1 * side2;
@@ -36,11 +36,11 @@ namespace Geometry
 
 }
 
-namespace Numbers
+namespace Operations
 {
-	int readNumber() {
+	int readNumber(std::string message) {
 		int num;
-		std::cout << "Enter a number: ";
+		std::cout << message;
 		std::cin >> num;
 		while (std::cin.fail())
 		{
@@ -48,7 +48,7 @@ namespace Numbers
 			std::cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-			std::cout << "Please enter a valid number: ";
+			std::cout << "Please enter a number: ";
 			std::cin >> num;
 		}
 		return num;
