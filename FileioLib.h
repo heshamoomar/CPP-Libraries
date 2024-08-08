@@ -63,4 +63,10 @@ namespace FileIO
 	//		}
 	//	}
 	//}
+
+	bool fileExists(const std::string& filename) {	//	Check if File Exists
+		std::ifstream file(filename);
+		return file.good();
+	}
+
 }
