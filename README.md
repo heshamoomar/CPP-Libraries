@@ -25,3 +25,4 @@ Update:
         FileIoLib.h added return type std::ofstream to the methods to return the file object for better usability
         Similar approach can be used for the 2nd method but it has to return std::vector<std::ofstream> object
         
+        Added fileExists()
