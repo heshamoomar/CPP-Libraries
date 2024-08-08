@@ -1,7 +1,7 @@
 #pragma once
 #include<iostream>
 
-namespace Random
+namespace rnd
 {
 	int RandomNumber(int min, int max) {
 		return min + rand() % (max - min + 1);
