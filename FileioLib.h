@@ -6,7 +6,7 @@
 namespace FileIO
 {
 
-	void create_file(std::string FileName, std::string FileExtention) {
+	std::ofstream create_file(std::string FileName, std::string FileExtention) {
 		std::string fullFileName;
 
 		if (FileExtention[0] != '.') {
@@ -20,6 +20,7 @@ namespace FileIO
 		if (!outFile) {
 			std::cerr << "Error creating file: " << fullFileName << std::endl;
 		}
+		return outFile;
 	}
 
 	void create_file(const std::string FileName, const std::string FileExtension, short NumberOfFiles) {
