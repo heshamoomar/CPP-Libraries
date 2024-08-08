@@ -14,9 +14,13 @@ Update:
 
 Note:   
 
-        MathLib.h std::numbers::pi is a C++v20 feature
+        MathLib.h std::numbers::pi is a C++v20 feature only
 
 Update: 
 
         MathLib.h renamed namespace Numbers to Operations to avoid conflict
 
+Update:
+
+        FileIoLib.h added return type std::ofstream to the methods to return the file object for better usability
+        
